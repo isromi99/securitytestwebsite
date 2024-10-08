@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Testing Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Security Testing Website</h1>
+    <p>This website is used to demonstrate vulnerabilities and showcase security testing.</p>
+  </header>
+
+  <section>
+    <h2>Vulnerability Demonstrations</h2>
+    <ul>
+      <li><a href="#xss">Cross-Site Scripting (XSS)</a></li>
+      <li><a href="#sql">SQL Injection (Demo)</a></li>
+      <li><a href="#auth">Broken Authentication</a></li>
+    </ul>
+  </section>
+
+  <section id="xss">
+    <h2>XSS Vulnerability</h2>
+    <p>This form is vulnerable to Cross-Site Scripting (XSS):</p>
+    <form action="" method="POST">
+      <label for="name">Enter your name:</label>
+      <input type="text" id="name" name="name">
+      <button type="submit" onclick="submitForm()">Submit</button>
+    </form>
+    <p id="response"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Security Testing Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
